@@ -189,7 +189,8 @@ public class DatePicker extends Observable implements Runnable, WindowFocusListe
 				return null;
 			} finally {
 				try {
-					is.close();
+					if(is!=null)
+						is.close();
 				} catch (IOException e) {
 				}
 			}

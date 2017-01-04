@@ -23,7 +23,8 @@ public class Images {
             return null;
         } finally {
             try {
-                is.close();
+            	if(is!=null)
+            		is.close();
             } catch (IOException e) {
             }
         }

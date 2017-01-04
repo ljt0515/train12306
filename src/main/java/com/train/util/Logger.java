@@ -12,8 +12,9 @@ import java.util.Date;
 public class Logger {
 	private JTextArea logger=MainFrame.textArea;
 	public void info(String str){
-		if(logger!=null)
-		logger.append(DateUtils.longDate(new Date())+str+"\r\n");
-		logger.setCaretPosition(logger.getText().length());
+		if(logger!=null){
+			logger.append(DateUtils.longDate(new Date())+str+"\r\n");
+			logger.setCaretPosition(logger.getText().length());
+		}
 	}
 }
